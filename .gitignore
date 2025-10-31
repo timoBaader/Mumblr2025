@@ -361,3 +361,19 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+
+# --- Mumblr custom ignores ---
+# Environment & secrets
+.env
+*.env
+secrets.json
+appsettings.*.local.json
+docker-compose.override.local.yml
+
+# VS/OS clutter (some already included, safe to duplicate)
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
