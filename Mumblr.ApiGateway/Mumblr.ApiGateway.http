@@ -1,0 +1,6 @@
+@Mumblr.ApiGateway_HostAddress = http://localhost:5088
+
+GET {{Mumblr.ApiGateway_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
