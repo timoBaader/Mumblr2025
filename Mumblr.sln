@@ -13,7 +13,21 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Shared", "Shared", "{2E9859
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{456E3F68-3FC9-48C9-AF34-2FDE8827F942}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1D862564-D5C2-4345-9AD8-57BBC30A0A11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Identity.Api", "Mumblr.Identity.Api\Mumblr.Identity.Api.csproj", "{5E26B50D-AF14-4BB4-B849-E9524A5B477D}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
@@ -21,6 +35,8 @@ Global
 		{3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{B150DAB5-7A89-43DB-B7AF-9CD37C23B55A} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{2E98597B-8831-4D57-825E-822D5DB27655} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1D862564-D5C2-4345-9AD8-57BBC30A0A11} = {3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527}
+		{5E26B50D-AF14-4BB4-B849-E9524A5B477D} = {1D862564-D5C2-4345-9AD8-57BBC30A0A11}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE8ACF58-D2E7-482A-840A-154FC3F5986A}
