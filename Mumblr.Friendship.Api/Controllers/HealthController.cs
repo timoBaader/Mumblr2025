@@ -1,5 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
-using System.Reflection;
+﻿using System.Reflection;
+using Microsoft.AspNetCore.Mvc;
 
 namespace Mumblr.Friendship.Api.Controllers;
 
@@ -16,3 +16,4 @@ public class HealthController : ControllerBase
         var ver = Assembly.GetExecutingAssembly().GetName().Version?.ToString() ?? "0.0.0";
         return Ok(new { service = "friendship", version = ver });
     }
+}
