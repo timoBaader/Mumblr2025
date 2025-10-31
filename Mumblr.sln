@@ -25,6 +25,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Friendship", "Friendship", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Friendship.Api", "Mumblr.Friendship.Api\Mumblr.Friendship.Api.csproj", "{3D5F0DD1-5964-4E4C-90F9-ABBB4A4C6AC8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{E5A942D7-F131-4395-946D-B811E5097452}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Messaging.Api", "Mumblr.Messaging.Api\Mumblr.Messaging.Api.csproj", "{68D34CFA-4740-46FD-9B9D-4149382AE6A2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -43,6 +47,10 @@ Global
 		{3D5F0DD1-5964-4E4C-90F9-ABBB4A4C6AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D5F0DD1-5964-4E4C-90F9-ABBB4A4C6AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D5F0DD1-5964-4E4C-90F9-ABBB4A4C6AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68D34CFA-4740-46FD-9B9D-4149382AE6A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68D34CFA-4740-46FD-9B9D-4149382AE6A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68D34CFA-4740-46FD-9B9D-4149382AE6A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68D34CFA-4740-46FD-9B9D-4149382AE6A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -57,6 +65,8 @@ Global
 		{C4E400B9-CE19-4B00-B942-B7386468ED48} = {94DB695C-977C-4CEF-AB33-FD3CDDE77E6A}
 		{5E60A329-77E4-42FC-A424-2DF5F06E42B9} = {3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527}
 		{3D5F0DD1-5964-4E4C-90F9-ABBB4A4C6AC8} = {5E60A329-77E4-42FC-A424-2DF5F06E42B9}
+		{E5A942D7-F131-4395-946D-B811E5097452} = {3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527}
+		{68D34CFA-4740-46FD-9B9D-4149382AE6A2} = {E5A942D7-F131-4395-946D-B811E5097452}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE8ACF58-D2E7-482A-840A-154FC3F5986A}
