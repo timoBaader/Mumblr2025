@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35806.99 d17.13
+VisualStudioVersion = 17.13.35806.99
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -17,6 +17,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identity", "Identity", "{1D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Identity.Api", "Mumblr.Identity.Api\Mumblr.Identity.Api.csproj", "{5E26B50D-AF14-4BB4-B849-E9524A5B477D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Posts", "Posts", "{94DB695C-977C-4CEF-AB33-FD3CDDE77E6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Posts.Api", "Mumblr.Posts.Api\Mumblr.Posts.Api.csproj", "{C4E400B9-CE19-4B00-B942-B7386468ED48}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,10 @@ Global
 		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E26B50D-AF14-4BB4-B849-E9524A5B477D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4E400B9-CE19-4B00-B942-B7386468ED48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4E400B9-CE19-4B00-B942-B7386468ED48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4E400B9-CE19-4B00-B942-B7386468ED48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4E400B9-CE19-4B00-B942-B7386468ED48}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,8 @@ Global
 		{2E98597B-8831-4D57-825E-822D5DB27655} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{1D862564-D5C2-4345-9AD8-57BBC30A0A11} = {3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527}
 		{5E26B50D-AF14-4BB4-B849-E9524A5B477D} = {1D862564-D5C2-4345-9AD8-57BBC30A0A11}
+		{94DB695C-977C-4CEF-AB33-FD3CDDE77E6A} = {3B2C4D16-FF4C-4DE1-9FD2-67BFEB28C527}
+		{C4E400B9-CE19-4B00-B942-B7386468ED48} = {94DB695C-977C-4CEF-AB33-FD3CDDE77E6A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {FE8ACF58-D2E7-482A-840A-154FC3F5986A}
