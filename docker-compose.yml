@@ -1,0 +1,18 @@
+version: "3.9"
+
+services:
+  postgres:
+    image: postgres:16
+    container_name: mumblr_pg
+    restart: unless-stopped
+    ports:
+      - "5433:5432"        # host:container. 5433 is what YOU connect to on Windows.
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: mumblr_identity_dev
+    volumes:
+      - pgdata:/var/lib/postgresql/data  # persist DB files across restarts
+
+volumes:
+  pgdata:

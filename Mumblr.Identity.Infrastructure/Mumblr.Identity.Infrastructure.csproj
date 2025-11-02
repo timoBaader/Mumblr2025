@@ -1,15 +1,27 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\Mumblr.Abstractions\Mumblr.Abstractions.csproj" />
-    <ProjectReference Include="..\Mumblr.Identity.Domain\Mumblr.Identity.Domain.csproj" />
-  </ItemGroup>
-	
-	
+	<ItemGroup>
+		<!-- EF Core runtime packages (8.x) -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.8" />
+		<!-- Design-time package for migrations/scaffolding -->
+		<PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+			<PrivateAssets>all</PrivateAssets>
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<!-- PostgreSQL provider for EF Core -->
+		<PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="8.0.4" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Mumblr.Abstractions\Mumblr.Abstractions.csproj" />
+		<ProjectReference Include="..\Mumblr.Identity.Domain\Mumblr.Identity.Domain.csproj" />
+	</ItemGroup>
+
 </Project>
