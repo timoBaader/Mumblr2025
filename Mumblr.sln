@@ -29,8 +29,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Messaging.Api", "Mumblr.Messaging.Api\Mumblr.Messaging.Api.csproj", "{68D34CFA-4740-46FD-9B9D-4149382AE6A2}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Messaging", "Messaging", "{76F0CE75-3D7F-4157-A992-4E4CCF14AFF0}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.ApiGateway", "Mumblr.ApiGateway\Mumblr.ApiGateway.csproj", "{2EED05AB-8893-4341-8482-22B5D41E9BD8}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Mumblr.Identity.Domain", "Mumblr.Identity.Domain\Mumblr.Identity.Domain.csproj", "{57560C48-0C08-4FCE-8F3E-6AA18DBF465C}"
