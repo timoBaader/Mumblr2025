@@ -17,6 +17,8 @@
 	<ItemGroup>
 		<ProjectReference Include="..\Mumblr.Identity.Application\Mumblr.Identity.Application.csproj" />
 		<ProjectReference Include="..\Mumblr.Identity.Infrastructure\Mumblr.Identity.Infrastructure.csproj" />
+		<PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore" Version="8.0.8" />
+
 	</ItemGroup>
 
 </Project>
