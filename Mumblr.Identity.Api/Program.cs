@@ -1,3 +1,5 @@
+using System.Text.Json;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Mumblr.Abstractions.Users;
 using Mumblr.Identity.Infrastructure.Db;
@@ -15,8 +17,10 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<IUserRepository, EfUserRepository>();
 
-var app = builder.Build();
+builder.Services.AddHealthChecks().AddDbContextCheck<IdentityDbContext>("postgres-db");
 builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
+
+var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
 {
@@ -29,5 +33,29 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+
+app.MapGet("/health/live", () => Results.Ok(new { status = "ok" }));
+
+app.MapHealthChecks(
+    "/health/ready",
+    new HealthCheckOptions
+    {
+        ResponseWriter = async (ctx, report) =>
+        {
+            var payload = new
+            {
+                status = report.Status.ToString(),
+                checks = report.Entries.Select(e => new
+                {
+                    name = e.Key,
+                    status = e.Value.Status.ToString(),
+                    error = e.Value.Exception?.Message
+                })
+            };
+            ctx.Response.ContentType = "application/json";
+            await ctx.Response.WriteAsync(JsonSerializer.Serialize(payload));
+        }
+    }
+);
 
 app.Run();
