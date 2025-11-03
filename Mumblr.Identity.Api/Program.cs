@@ -1,8 +1,10 @@
 using System.Text.Json;
 using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
+using Mumblr.Abstractions.Security;
 using Mumblr.Abstractions.Users;
 using Mumblr.Identity.Infrastructure.Db;
+using Mumblr.Identity.Infrastructure.Security;
 using Mumblr.Identity.Infrastructure.Users;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -19,6 +21,7 @@ builder.Services.AddScoped<IUserRepository, EfUserRepository>();
 
 builder.Services.AddHealthChecks().AddDbContextCheck<IdentityDbContext>("postgres-db");
 builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
+builder.Services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
 
 var app = builder.Build();
 
