@@ -8,6 +8,7 @@
 
 	<ItemGroup>
 		<!-- EF Core runtime packages (8.x) -->
+		<PackageReference Include="BCrypt.Net-Next" Version="4.0.3" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
 		<PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="8.0.8" />
 		<!-- Design-time package for migrations/scaffolding -->
