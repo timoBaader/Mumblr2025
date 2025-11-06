@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.EntityFrameworkCore;
 using Mumblr.Abstractions.Security;
 using Mumblr.Abstractions.Users;
+using Mumblr.Identity.Application;
+using Mumblr.Identity.Application.Users.Commands;
 using Mumblr.Identity.Infrastructure.Db;
 using Mumblr.Identity.Infrastructure.Security;
 using Mumblr.Identity.Infrastructure.Users;
@@ -22,6 +24,7 @@ builder.Services.AddScoped<IUserRepository, EfUserRepository>();
 builder.Services.AddHealthChecks().AddDbContextCheck<IdentityDbContext>("postgres-db");
 builder.Services.AddSingleton<IUserRepository, InMemoryUserRepository>();
 builder.Services.AddSingleton<IPasswordHasher, BCryptPasswordHasher>();
+builder.Services.AddIdentityApplication();
 
 var app = builder.Build();
 
@@ -62,3 +65,5 @@ app.MapHealthChecks(
 );
 
 app.Run();
+
+public partial class Program { }

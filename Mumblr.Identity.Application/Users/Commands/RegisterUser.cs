@@ -3,35 +3,26 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Mumblr.Abstractions.Security;
 using Mumblr.Abstractions.Users;
 using Mumblr.Identity.Domain.Users;
 using Mumblr.SharedKernel.Primitives;
 
 namespace Mumblr.Identity.Application.Users.Commands;
 
-public sealed class RegisterUser
-{
-    public string UserName { get; init; } = default!;
-    public string Email { get; init; } = default!;
-    public string Password { get; init; } = default!;
-}
-
-public sealed class RegisterUserHandler
+internal sealed class RegisterUser : IRegisterUser
 {
     private readonly IUserRepository _users;
+    private readonly IPasswordHasher _hasher;
 
-    public RegisterUserHandler(IUserRepository users) => _users = users;
-
-    public async Task<Result> Handle(RegisterUser cmd, CancellationToken ct = default)
+    public RegisterUser(IUserRepository users, IPasswordHasher hasher)
     {
-        // Just a placeholder for now (no validation/hash yet)
-        var user = new User
-        {
-            Id = Guid.NewGuid(),
-            UserName = cmd.UserName,
-            Email = cmd.Email
-        };
-        await _users.AddAsync(user, ct);
-        return Result.Ok();
+        _users = users;
+        _hasher = hasher;
+    }
+
+    public Task<Guid> Execute(string userName, string email, string password, CancellationToken ct)
+    {
+        throw new NotImplementedException();
     }
 }

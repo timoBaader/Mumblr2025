@@ -9,7 +9,7 @@ namespace Mumblr.Identity.Api.Controllers;
 public class DebugController : ControllerBase
 {
     [HttpPost("hash")]
-    public IActionResult Hash([FromServices] IPasswordHasher hasher, [FromBody] Req body)
+    public IActionResult Hash([FromServices] IPasswordHasher hasher, [FromBody] HashRequest body)
     {
         if (string.IsNullOrWhiteSpace(body.Password))
             return BadRequest(new { error = "Password is required." });
@@ -20,7 +20,7 @@ public class DebugController : ControllerBase
         return Ok(new { hash, ok });
     }
 
-    public sealed class Req
+    public sealed class HashRequest
     {
         public string Password { get; init; } = string.Empty;
     }
